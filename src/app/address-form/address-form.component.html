@@ -1,17 +1,19 @@
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+
   <mat-card class="shipping-card">
+
     <mat-card-header>
       <mat-card-title>Shipping Information</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Company" formControlName="company">
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="First name" formControlName="firstName">
@@ -29,7 +31,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-form-field class="full-width">
             <textarea matInput placeholder="Address" formControlName="address"></textarea>
@@ -39,21 +41,21 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row" *ngIf="!hasUnitNumber">
+      <div fxLayout="row wrap" *ngIf="!hasUnitNumber">
         <div class="col">
           <button mat-button type="button" (click)="hasUnitNumber = !hasUnitNumber">
             + Add C/O, Apt, Suite, Unit
           </button>
         </div>
       </div>
-      <div class="row" *ngIf="hasUnitNumber">
+      <div fxLayout="row wrap" *ngIf="hasUnitNumber">
         <div class="col">
           <mat-form-field class="full-width">
             <textarea matInput placeholder="Address 2" formControlName="address2"></textarea>
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="City" formControlName="city">
@@ -75,7 +77,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
@@ -83,7 +85,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div fxLayout="row wrap">
         <div class="col">
           <mat-radio-group formControlName="shipping">
             <mat-radio-button value="free">Free Shipping</mat-radio-button>
@@ -97,4 +99,5 @@
       <button mat-raised-button color="primary" type="submit">Submit</button>
     </mat-card-actions>
   </mat-card>
+
 </form>

@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TableFormComponent } from './table-form/table-form.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,1 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
-.container{
-    padding-top: 50px;
-    padding-left: 80px;
-    padding-right: 80px;
-}
